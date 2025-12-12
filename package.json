@@ -9,6 +9,9 @@
     "start": "node ./dist/server.js",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev"
+    "dev": "prisma generate && nodemon src/index.ts",
+    "dev": "prisma generate && ts-node-dev src/index.ts",
+    "dev": "prisma generate && ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
