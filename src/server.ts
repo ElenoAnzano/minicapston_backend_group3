@@ -7,12 +7,14 @@ import {broadcastStaffStatus} from "./socket"
 
 dotenv.config();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT ? Number(process.env.PORT) : 5000;
 const server = http.createServer(app);
 
 const io = new SocketIOServer(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: process.env.NODE_ENV === "production"
+        ? ["https://your-frontend.vercel.app", "https://minicapston-frontend.up.railway.app"] // ← put your real frontend URLs here
+        : "http://localhost:5173",
     credentials: true,
   },
 });
@@ -24,3 +26,4 @@ server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 
 });
+
