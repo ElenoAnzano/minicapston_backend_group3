@@ -1,4 +1,4 @@
-import { profileRepository } from "@/repositories/profileRepository";
+import { profileRepository } from "../repositories/profileRepository";
 
 class ProfileService {
   async getProfile(idNumber: string) {

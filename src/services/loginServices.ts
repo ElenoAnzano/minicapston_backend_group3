@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import { prisma } from "@/repositories/loginRepo";
+import { prisma } from "../repositories/loginRepo";
 
 export const authService = {
   // REGISTER - with duplicate ID check
