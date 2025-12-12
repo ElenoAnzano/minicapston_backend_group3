@@ -1,5 +1,5 @@
 import express from "express";
-import { getAll, create, update, remove } from "@/controllers/dashboardController";
+import { getAll, create, update, remove } from "../controllers/dashboardController";
 
 const router = express.Router();
 
@@ -9,4 +9,5 @@ router.put("/:id", update);
 router.delete("/:id", remove);
 
 export default router;
+
 
