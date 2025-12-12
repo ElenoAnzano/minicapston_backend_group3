@@ -1,5 +1,5 @@
 import { Server as SocketIOServer, Socket } from "socket.io";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from ".prisma/client";
 
 const prisma = new PrismaClient();
 const TWO_DAYS_MS = 1000 * 60 * 60 * 24 * 2;
@@ -395,4 +395,5 @@ socket.on("staff_request_conversations", async () => {
     setInterval(() => {
         console.log(`Online → Staff: ${onlineStaff.size} | Students: ${onlineStudents.size}`);
     }, 60_000);
+
 };
