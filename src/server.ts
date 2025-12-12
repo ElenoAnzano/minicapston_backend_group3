@@ -13,7 +13,7 @@ const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
     origin: process.env.NODE_ENV === "production"
-        ? ["https://your-frontend.vercel.app", "https://minicapston-frontend.up.railway.app"] // ← put your real frontend URLs here
+        ? ["https://your-frontend.vercel.app", "https://eventmanagement-taupe.vercel.app/login"] 
         : "http://localhost:5173",
     credentials: true,
   },
@@ -26,4 +26,5 @@ server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 
 });
+
 
