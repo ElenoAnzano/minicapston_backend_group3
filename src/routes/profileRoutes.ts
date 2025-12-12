@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getProfile, updateName, updatePhoto } from "@/controllers/profileController"
+import { getProfile, updateName, updatePhoto } from "../controllers/profileController"
 
 const router = Router();
 
@@ -11,5 +11,6 @@ router.post("/update-name", updateName);
 
 // Update profile photo
 router.post("/update-photo", updatePhoto);
+
 
 export default router;
