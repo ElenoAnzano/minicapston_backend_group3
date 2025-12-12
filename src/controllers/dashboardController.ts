@@ -4,7 +4,7 @@ import {
   createEvent,
   updateEvent,
   deleteEvent,
-} from "@/repositories/dashboardRepo";
+} from "../repositories/dashboardRepo";
 //get
 export const getAll = async (req: Request, res: Response) => {
   const events = await getAllEvents();
@@ -28,4 +28,5 @@ export const remove = async (req: Request, res: Response) => {
   const { id } = req.params;
   await deleteEvent(id);
   res.status(204).send();
+
 };
