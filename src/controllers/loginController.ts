@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { authService } from "@/services/loginServices";
+import { authService } from "../services/loginServices";
 
 export const register = async (req: Request, res: Response) => {
   try {
@@ -50,4 +50,5 @@ export const resetPassword = async (req: Request, res: Response) => {
   } catch (error: any) {
     res.status(400).json({ message: error.message });
   }
+
 };
