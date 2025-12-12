@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import router from "../src/routes";
+import router from "./routes";
 import loginRoutes from "@/routes/loginRoutes";
 import profileRoutes from "@/routes/profileRoutes";
 
@@ -29,3 +29,4 @@ app.use("/api/profile", profileRoutes);
 
 
 export default app;
+
