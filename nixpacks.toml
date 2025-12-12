@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["...","nodejs", "typescript", "ts-node"]
+
+[phases.build]
+cmds = ["prisma generate"]
+
+[start]
+cmd = "npm run dev"
