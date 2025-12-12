@@ -13,6 +13,8 @@ app.use(
   })
 );
 
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 app.use(express.json());
 
 app.use("/api/dashboard", router);
@@ -29,5 +31,6 @@ app.use("/api/profile", profileRoutes);
 
 
 export default app;
+
 
 
