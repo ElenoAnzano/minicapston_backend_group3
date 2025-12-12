@@ -1,9 +1,9 @@
 import dotenv from "dotenv";
 import http from "http";
-import app from "@/app";
+import app from "./app";
 import { Server as SocketIOServer } from "socket.io";
-import { setupSocket } from "@/socket";
-import {broadcastStaffStatus} from "@/socket"
+import { setupSocket } from "./socket";
+import {broadcastStaffStatus} from "./socket"
 
 dotenv.config();
 
@@ -22,4 +22,5 @@ broadcastStaffStatus(io);
 
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
+
 });
