@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "https://eventmanagement-taupe.vercel.app",
+    origin: ["https://minicapston-test2.vercel.app","https://eventmanagement-taupe.vercel.app"]
     credentials: true,
   })
 );
@@ -31,6 +31,7 @@ app.use("/api/profile", profileRoutes);
 
 
 export default app;
+
 
 
 
