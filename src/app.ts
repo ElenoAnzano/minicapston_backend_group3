@@ -8,7 +8,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://minicapston-test2.vercel.app","https://eventmanagement-taupe.vercel.app"]
+    origin: process.env.NODE_ENV === "production"
+      ? ["https://minicapston-test2.vercel.app", "https://eventmanagement-taupe.vercel.app"]
+      : "http://localhost:5173",
     credentials: true,
   })
 );
@@ -31,6 +33,7 @@ app.use("/api/profile", profileRoutes);
 
 
 export default app;
+
 
 
 
