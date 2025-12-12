@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { profileService } from "@/services/profileService";
+import { profileService } from "../services/profileService";
 
 export const getProfile = async (req: Request, res: Response) => {
   try {
@@ -32,4 +32,5 @@ export const updatePhoto = async (req: Request, res: Response) => {
   } catch (error: any) {
     res.status(400).json({ error: error.message });
   }
+
 };
