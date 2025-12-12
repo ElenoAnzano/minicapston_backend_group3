@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from ".prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -17,4 +17,5 @@ export const updateEvent = (id: string, data: { date: string; items: string }) =
   });
 
 export const deleteEvent = (id: string) =>
+
   prisma.dashboardHandler.delete({ where: { id } });
