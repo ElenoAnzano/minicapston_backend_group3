@@ -8,10 +8,9 @@
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/server.ts",
     "start": "node ./dist/server.js",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev"
-    "dev": "prisma generate && nodemon src/index.ts",
-    "dev": "prisma generate && ts-node-dev --respawn --transpile-only src/index.ts",
-    "dev": "prisma generate && ts-node src/index.ts"
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
   },
   "keywords": [],
   "author": "",
